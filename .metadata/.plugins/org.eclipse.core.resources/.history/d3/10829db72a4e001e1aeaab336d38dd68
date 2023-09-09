@@ -1,0 +1,5 @@
+package dev.aayush.placement_system.Configuration;
+
+public class CorsConfig {
+
+}

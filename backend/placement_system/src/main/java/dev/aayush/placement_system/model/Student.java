@@ -90,6 +90,11 @@ public class Student {
 		this.course = course;
 	}
 
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Date getCourse_start() {
 		return course_start;
 	}

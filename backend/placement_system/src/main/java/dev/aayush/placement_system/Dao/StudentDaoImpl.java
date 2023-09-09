@@ -7,11 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import dev.aayush.placement_system.model.Student;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 
 @Repository
 public class StudentDaoImpl implements StudentDao {
 	
+	@PersistenceContext
 	private EntityManager entityManager;
 	
 	@Override
@@ -30,7 +32,11 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public void save(Student student) {
+	public Student save(Student student) {
+		Session currentSession = entityManager.unwrap(Session.class);
+	    currentSession.save(student);
+	    return student;
+		
 		// TODO Auto-generated method stub
 		
 	}
