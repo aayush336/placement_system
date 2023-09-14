@@ -29,10 +29,14 @@ public class Student {
 	@Column private String company;
 	@Column private String interview_exp;
 	@Column private int work_exp;
+	@Column private float class10Score;
+	@Column private float class12Score;
+	@Column private float gradScore;
+	@Column private float postGradScore;
 	
 	public Student(int id, String name, Date dob, boolean passed, String course, Date course_start, Date course_end,
-			String gender, boolean placed, String email, String company, String interview_exp,
-			int work_exp) {
+			String gender, boolean placed, String email, String company, String interview_exp, int work_exp,
+			float class10Score, float class12Score, float gradScore, float postGradScore) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -42,14 +46,50 @@ public class Student {
 		this.course_start = course_start;
 		this.course_end = course_end;
 		this.gender = gender;
-		
 		this.placed = placed;
 		this.email = email;
 		this.company = company;
 		this.interview_exp = interview_exp;
 		this.work_exp = work_exp;
+		this.class10Score = class10Score;
+		this.class12Score = class12Score;
+		this.gradScore = gradScore;
+		this.postGradScore = postGradScore;
 	}
 
+	public float getClass10Score() {
+		return class10Score;
+	}
+
+	public void setClass10Score(float class10Score) {
+		this.class10Score = class10Score;
+	}
+
+	public float getClass12Score() {
+		return class12Score;
+	}
+
+	public void setClass12Score(float class12Score) {
+		this.class12Score = class12Score;
+	}
+
+	public float getGradScore() {
+		return gradScore;
+	}
+
+	public void setGradScore(float gradScore) {
+		this.gradScore = gradScore;
+	}
+
+	public float getPostGradScore() {
+		return postGradScore;
+	}
+
+	public void setPostGradScore(float postGradScore) {
+		this.postGradScore = postGradScore;
+	}
+
+	
 	public int getId() {
 		return id;
 	}
